@@ -16,6 +16,9 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => console.log("Database connection error: ", err));
 
 // Sample Test Route
+app.get('/', (req, res) => {
+  res.send('Expense Tracker Backend is running successfully!');
+});
 app.get('/api/test', (req, res) => {
   res.json({ message: "Hello from the Node.js hello Backend!" });
 });
